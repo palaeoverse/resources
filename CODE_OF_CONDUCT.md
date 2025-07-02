@@ -20,14 +20,14 @@ community include:
 * Demonstrating empathy and kindness toward other people
 * Being respectful of differing opinions, viewpoints, and experiences
 * Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
+* Accepting responsibility and apologising to those affected by our mistakes,
   and learning from the experience
 * Focusing on what is best not just for us as individuals, but for the
   overall community
 
 Examples of unacceptable behavior include:
 
-* The use of sexualized language or imagery, and sexual attention or
+* The use of sexualised language or imagery, and sexual attention or
   advances of any kind
 * Trolling, insulting or derogatory comments, and personal or political attacks
 * Public or private harassment
@@ -60,8 +60,8 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement:
-[Pedro L. Godoy](mailto:pedrolorenagodoy@gmail.com) and 
-[Bethany Allen](mailto:bethany.allen@bsse.ethz.ch).
+[Lewis A. Jones](mailto:lewis.jones@ucl.ac.uk) and 
+[Bethany Allen](mailto:bethany.janet.allen@gfz.de).
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
