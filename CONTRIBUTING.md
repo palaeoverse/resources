@@ -32,9 +32,9 @@ If you would like to make a substantial change, you should first file an issue a
 6. Push your commits to your forked repository
 7. When your changes are complete, you should submit your changes for merging via a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (“PR”) on GitHub
 
-Note that a complete pull request should include a succinct description ([see function template](PULL_REQUEST.md)) of what the code changes do, proper documentation (via [roxygen2](https://roxygen2.r-lib.org)), and unit tests (via `testthat`). Only the description is required for the initial pull request and code review (see below), but pull requests will not be merged until they contain complete documentation and tests.
+Note that a complete pull request should include a succinct description ([see function template](PULL_REQUEST_TEMPLATE.md)) of what the code changes do, proper documentation (via [roxygen2](https://roxygen2.r-lib.org)), and unit tests (via `testthat`). Only the description is required for the initial pull request and code review (see below), but pull requests will not be merged until they contain complete documentation and tests.
 
-If you are not comfortable with git/GitHub, you can reach out to one of the ([core team](https://palaeoverse.org/#about-us) via email and they can make a pull request on your behalf. However, you will be expected to respond to any reviewer comments on GitHub (see below).
+If you are not comfortable with git/GitHub, you can reach out to one of the [core team](https://palaeoverse.org/#about-us) via email and they can make a pull request on your behalf. However, you will be expected to respond to any reviewer comments on GitHub (see below).
 
 If you don't feel comfortable implementing changes yourself, you can submit a bug report or feature request as a GitHub issue in the proper repository (e.g. for [palaeoverse issues](https://github.com/palaeoverse/palaeoverse/issues)).
 
