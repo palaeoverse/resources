@@ -10,7 +10,7 @@ logo:
   
 color:
   palette:
-    light-blue: "#BFEOE2"
+    light-blue: "#BFE0E2"
     mid-blue: "#98D3DC"
     dark-blue: "#64BDD8"
     light-pink: "#E4BEDB"
@@ -44,4 +44,5 @@ typography:
   headings: Atkinson Hyperlegible
   monospace: Space Mono
   link:
+    color: dark-blue
     decoration: underline
