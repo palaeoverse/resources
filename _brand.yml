@@ -36,12 +36,12 @@ color:
 
 typography:
   fonts:
-    - family: Arboria
+    - family: Atkinson Hyperlegible
       source: google
   base: 
-    family: Arboria
+    family: Atkinson Hyperlegible
     weight: 400
-  headings: Arboria
+  headings: Atkinson Hyperlegible
   monospace: Space Mono
   link:
     decoration: underline
