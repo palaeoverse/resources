@@ -1,3 +1,6 @@
+Palaeoverse is a community-driven initiative advancing open science in palaeontology through shared tools, training, and resources. The human aspect of this project is therefore important to us, which explains why we wrote the document you are currently reading. The objective of this community is also to enable researchers at every career stage to learn and develop new skills. 
+
+Still, we acknowledge the potential usefulness and growing prevalence of AI, but wish to see it used only where reasonable and appropriate. The objective of this policy is to provide some guidelines regarding AI usage on our various platforms, such as Github and Zulip. 
 
 ### Github
 
