@@ -42,15 +42,15 @@ color:
 
 typography:
   fonts:
-    - family: Atkinson Hyperlegible
+    - family: Lexend
       source: google
-    - family: Space Mono
+    - family: Roboto Mono
       source: google
   base:
-    family: Atkinson Hyperlegible
+    family: Lexend
     weight: 400
-  headings: Atkinson Hyperlegible
-  monospace: Space Mono
+  headings: Lexend
+  monospace: Roboto Mono
   link:
     color: dark-green
     decoration: underline
