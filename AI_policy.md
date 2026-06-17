@@ -1,21 +1,23 @@
-Palaeoverse is a community-driven initiative advancing open science in palaeontology through shared tools, training, and resources. The objective of this community is also to enable researchers at every career stage to learn and develop new skills. The human aspect of this project is therefore important to us, which is the reason why we wrote this document.
+# AI Policy
 
-Still, we acknowledge the potential usefulness and growing prevalence of AI, but wish to see it used only where reasonable and appropriate. The objective of this policy is to provide some guidelines regarding AI usage on our various platforms, such as Github and Zulip. This policy is adapted from **XXX**.
+Palaeoverse is a community-driven initiative advancing open science in palaeontology through shared tools, training, and resources. Part of this initiative is to enable researchers at every career stage to learn and develop new technical and social skills. The human aspect of this work is therefore important to us and we are committed to maintaining spaces for human interaction and engagement. We acknowledge the potential usefulness and growing prevalence of Artificial Intelligence (AI), but wish to see it used only where reasonable and appropriate, whilst prioritising accuracy, accessibility, and upskilling. 
 
-### AI for communication
+The objective of this policy is to provide some guidelines regarding AI usage on our various platforms, such as Github and Zulip. This policy is adapted from [Zulip’s AI policy](https://github.com/zulip/zulip/blob/main/CONTRIBUTING.md#ai-use-policy-and-guidelines).
 
-Do not post AI-generated messages, i.e., Zulip messages, Github issues, pull requests description, and other messages must be written by humans. It's fine to use whatever tools you like for help with spelling, grammar, or translation.
+## AI for communication
 
-Quoting an LLM answer is usually less helpful than linking to relevant primary sources, like source code, reference documentation, or web standards. If you do need to quote an LLM answer in a conversation, put the answer in a quote block, to distinguish LLM output from your own thoughts.
+Do not post AI-generated messages: Zulip messages, Github issues, pull request (PR) descriptions, and other messages must be written by humans. If you need to quote an AI answer in a conversation, put the answer in a quote block (starting with “\>” in [Markdown](https://www.markdownguide.org/basic-syntax/)) to distinguish AI output from your own thoughts. 
 
-### AI for coding
+You can use any tool you like for help with spelling, grammar, or translation, but ultimately must take personal responsibility for the messages you post.
 
-You can use any tools that help you understand the codebase and write good code, including AI tools. If you used AI to generate code, you must disclose it in the PR description. Additionally, you always need to understand and explain the changes you're proposing to make, whether or not you used an LLM as part of your process to produce them. The answer to "Why is X an improvement?" should never be "I'm not sure. The AI did it.".
+## AI for coding
 
-Do not submit an AI-generated PR you haven't personally understood and tested, as this wastes maintainers' time. 
+You can use any tool that helps you understand the Palaeoverse code repositories and write good code, including AI tools. If you used AI to generate code, you must disclose it in the pull request description and mention the tool and version used (e.g. Claude Opus 4.8, or OpenAI Codex 5.3). Additionally, you always need to understand and explain the changes you're proposing to make, whether or not you used an AI as part of your process to produce them. The answer to "Why is X an improvement?" should never be "I'm not sure. The AI did it.".
 
-Changes in documentation (e.g., documenting a new function argument, adding a vignette, editing the changelog) can be based on LLM output, but it remains your responsibility to read through the whole thing and make sure that it makes sense to you and represents your ideas concisely. A good rule of thumb is that if you can't make yourself carefully read some LLM output that you generated, nobody else wants to read it either.
+Do not submit an AI-generated PR you haven't personally understood and tested.
 
-### Rule violations
+Changes in documentation (e.g. documenting a new function argument, adding a vignette, editing the changelog) can be based on AI output, but it remains your responsibility to read through the entire text and ensure that it makes sense to you and represents your ideas concisely. It needs to be understood and appreciated by human readers. A good rule of thumb is that if you can't make yourself carefully read some AI output that you generated, nobody else will want to read it either.
 
-Violating these rules may lead to message deletions or pull requests being closed, and repeated offences may lead to temporary or permanent bans.
+## Rule violations
+
+Not following these rules will be treated as a [Code of Conduct](https://palaeoverse.github.io/about/code-of-conduct/) violation and will be addressed as detailed in the [“Enforcement guidelines” section](https://palaeoverse.github.io/about/code-of-conduct/#enforcement-guidelines).
