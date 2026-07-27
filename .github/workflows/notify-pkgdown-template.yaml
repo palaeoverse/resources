@@ -41,13 +41,12 @@ jobs:
           echo "date=${DATE}" >> "$GITHUB_OUTPUT"
 
           # Empty when no issue is open, which makes the next step create one.
-          # The label may not exist yet in the target repo, hence the fallback.
           NUMBER=$(gh issue list \
             --repo "$TEMPLATE_REPO" \
             --state open \
             --label "$ISSUE_LABEL" \
             --json number \
-            --jq '.[0].number // empty' || true)
+            --jq '.[0].number // empty')
           echo "issue-number=${NUMBER}" >> "$GITHUB_OUTPUT"
 
           DATE="$DATE" envsubst '$COMMIT_URL $DATE' \
