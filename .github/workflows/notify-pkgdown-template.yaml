@@ -1,0 +1,65 @@
+# This workflow exists so that the pkgdown template knows when the brand file changes.
+#
+# Any change in _brand.yml opens an issue in palaeoverse.template asking for the new
+# brand to be imported there. If such an issue is still open, its title and body are
+# refreshed with the date of the most recent change instead of opening a new one.
+#
+# This workflow doesn't automatically run `quarto use brand palaeoverse/resources`
+# in the resources repo because this would need to trigger workflows in pkgdown
+# websites anyway and it would add complexity.
+#
+# The issue body lives in .github/templates/sync-brand-issue.md.
+
+on:
+  push:
+    branches: main
+    paths:
+      - _brand.yml
+
+name: Notify pkgdown template
+
+permissions:
+  contents: read
+
+env:
+  TEMPLATE_REPO: palaeoverse/palaeoverse.template
+  ISSUE_LABEL: brand-sync
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Look for an open sync-brand issue and render the template
+        id: prepare
+        env:
+          GH_TOKEN: ${{ secrets.PALAEOVERSE_TEMPLATE_DISPATCH_TOKEN }}
+          COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+        run: |
+          DATE=$(date -u +'%Y-%m-%d')
+          echo "date=${DATE}" >> "$GITHUB_OUTPUT"
+
+          # Empty when no issue is open, which makes the next step create one.
+          # The label may not exist yet in the target repo, hence the fallback.
+          NUMBER=$(gh issue list \
+            --repo "$TEMPLATE_REPO" \
+            --state open \
+            --label "$ISSUE_LABEL" \
+            --json number \
+            --jq '.[0].number // empty' || true)
+          echo "issue-number=${NUMBER}" >> "$GITHUB_OUTPUT"
+
+          DATE="$DATE" envsubst '$COMMIT_URL $DATE' \
+            < .github/templates/sync-brand-issue.md \
+            > sync-brand-issue.rendered.md
+
+      - name: Open or update the issue in palaeoverse.template
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6.0.0
+        with:
+          repository: ${{ env.TEMPLATE_REPO }}
+          token: ${{ secrets.PALAEOVERSE_TEMPLATE_DISPATCH_TOKEN }}
+          issue-number: ${{ steps.prepare.outputs.issue-number }}
+          title: "Sync _brand.yml from palaeoverse/resources (last change: ${{ steps.prepare.outputs.date }})"
+          content-filepath: sync-brand-issue.rendered.md
+          labels: ${{ env.ISSUE_LABEL }}
